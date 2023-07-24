@@ -1,0 +1,190 @@
+/* Styling for the entire page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    /* Setting a background image for the body */
+    background-image: url(https://j.gifs.com/j2VzyP.gif);
+    background-size: cover;
+}
+
+/* Styling for the animated figure's head */
+.head {
+    background-color: #B5651D;
+    width: 300px;
+    height: 350px;
+     /* Creating an oval shape for the head using border-radius */
+    border-radius: 70% 70% 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the eyes and eyebrows */
+.eyes, .brows {
+    position: absolute;
+    width: 195px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the individual eye */
+.eye {  
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background-color: white;
+    height: 50px;
+    width: 65px;
+     /* Creating a rounded shape for the eye using border-radius */
+    border-radius: 100%;
+    /* Adding a top border to simulate the eye's eyelid */
+    border-top: 3px solid hsl(19, 46%, 68%);  
+     /* Blink animation for the eye */
+    animation: blink 3s infinite forwards;
+}
+
+/* Keyframes for the blink animation */
+@keyframes blink {
+    0%, 100% {
+      height: 50px;
+    }
+    50% {
+      height: 0px;
+    }
+  }
+
+  /* Styling for the eye's iris */
+.eye::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: black;
+     /* Creating a rounded shape for the iris using border-radius */
+    border-radius: 100%;
+    /* Blink animation for the iris */
+    animation: blink 3s infinite forwards;
+}
+
+
+/* Styling for the eyebrows */
+.brow {
+    width: 65px;
+    height: 20px;
+    border-top: 10px solid;
+    border-radius: 100%;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the eyebrows */
+.brow:hover {
+    transform: translateY(-5px);
+}
+
+/* Hover effect for the eyebrows */
+.nose {
+    position: absolute;
+    border: 4px solid;
+    margin-top: 60px;
+    border-radius: 0% 0% 100% 100%;
+    border-top: none;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+
+/* Styling for the mouth */
+.mouth {
+    position: absolute;
+    border: 4px solid;
+    margin-top: 200px;
+    border-radius: 0% 0% 100% 100%;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-width: 2px;
+}
+
+/* Hover effect for the mouth */
+.mouth:hover {
+     /* Creating a circular shape for the mouth on hover */
+    border-radius: 100%;
+    width: 140px;
+    height: 80px;
+    /* Adding transitions for smooth animation */
+    transition: border-radius 1.5s, width 1.5s, height 1.5s;
+}
+
+/* Styling for the ears */
+.ears {
+    z-index: -1;
+    position: absolute;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for individual ear */
+.ear {
+    width: 40px;
+    height: 70px;
+    background-color:#B5651D;
+    border-radius: 100%;
+}
+
+/* Styling for the hair */
+.hair{
+    margin-bottom: 300px;
+    position: absolute;
+    background: black;
+    width: 300px;
+    height: 150px;
+    border-radius: 90% 30% 0 0;
+}
+
+.hair::before,
+.hair::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100px;
+    width: 10px;
+     /* Positioning the hair parts to appear like hair strands */
+    transform: translateY(100%);
+}
+
+.hair::after {
+    right: 0;
+}
+
+
+/* Styling for the hidden paragraph (appears only on larger screens) */
+.para {
+    z-index: 1;
+    display: flex;
+    margin-bottom: 500px;
+    margin-left: 350px;
+    font-size: 100px;
+    color: blue;
+    animation: sleep 3s infinite forwards;
+}
+
+
+/* Keyframes for the sleep animation */
+@keyframes sleep {
+    0%, 100% {
+      height: 50px;
+    }
+    50% {
+      height: 0px;
+    }
+  }
