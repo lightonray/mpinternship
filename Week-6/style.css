@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+  }
+ 
+ 
+ 
+ /* Container styles */
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form styles */
+  .form-wrapper {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 300px;
+  }
+  
+  .form-wrapper h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #555;
+  }
+
+
+
+  /* Navigation styles */
+  .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the navigation to the right */
+}
+
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+
+
+.login-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #555;
+}
