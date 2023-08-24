@@ -17,4 +17,4 @@ $login->logIn();
 
 // Going back to front page
 
-header("location: ../profile.php?error=none");
+header("location: ../home.php?error=none");

@@ -1,46 +1,27 @@
-<?php
-
-session_start();
-
-if (!isset($_SESSION["username"])) {
-    // Redirect to an error page or login page
-    header("location: ./login.php"); // Redirect to your login page
-    exit();
-}
-
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>Log in</title>
+<style>
+  /* Center the content vertically and horizontally */
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this for your needs */
+  }
+</style>
 </head>
 <body>
-<div class="container">
-        <div class="form-wrapper">
-            <ul class="nav-list">
-                <?php
-                if (isset($_SESSION["username"])) {
-                    echo '<li class="nav-item">
-                              <a class="login-button" href="profile.php">' . $_SESSION["username"] . '</a>
-                          </li>
-                          <li class="nav-item" style="margin-left: 20%">
-                              <a class="login-button" href="./includes/logout.inc.php">Log Out</a>
-                          </li>';
-                } else {
-                    echo '<li class="nav-item">
-                              <a class="login-button" href="./login.php">Log In</a>
-                          </li>';
-                }
-                ?>
-            </ul>
-        </div>
-    </div>
-    
+
+<div class="center-container">
+  <?php
+  session_start(); // Start the session if not already started
+  
+  if (isset($_SESSION["username"])) {
+      echo '<h1>Welcome ' . $_SESSION["username"] . '</h1>';
+  } 
+  ?>
+</div>
+
 </body>
 </html>
